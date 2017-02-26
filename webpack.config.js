@@ -72,7 +72,7 @@ module.exports = {
         use: [nib()],
       }
     }),
-    new ExtractTextPlugin({filename: 'assets/css/[name].css', allChunks: true}),
+    new ExtractTextPlugin({filename: 'assets/css/[name].[hash].css', allChunks: true}),
 
     new CopyWebpackPlugin([
       { from: helpers.root('node_modules/font-awesome/fonts/'), to: 'assets/fonts'},

@@ -1,9 +1,36 @@
 import React, { Component } from 'react';
+import firebase from 'firebase';
+
+import AppLogin from './app.login';
+import AppChat from './app.chat';
 
 class App extends Component {
 
+  constructor(){
+    super();
+    this.state = {user: null, logged: false};
+  }
+
+  // when start to load the component
+  componentWillMount() {
+    firebase.auth().onAuthStateChanged(user => {
+
+      if(!user) return;
+
+      let logged = true;
+      this.setState({ user, logged });
+    });
+  }
+
   render() {
-    return (<h1>Hello </h1>);
+    if(!this.state.logged){
+      return (
+        <AppLogin />
+      );
+    }
+    return(
+      <AppChat />
+    );
   }
 }
 

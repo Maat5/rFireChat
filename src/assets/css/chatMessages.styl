@@ -1,0 +1,50 @@
+.chat-container
+  display flex
+  flex-direction column
+  position relative
+  min-height 100%
+  height 100%
+  padding 0
+  margin-left 0 !important
+  margin-right 0 !important
+
+.chat-messsages-container
+  padding 10px
+  overflow-y auto
+  overflow-x hidden
+  .message
+    margin-bottom 20px
+  .message-body
+    max-width 80%;
+    display inline-block
+    padding 10px
+    background-color #eee
+    border 1px
+    border-radius 5px
+    padding-right 50px
+    margin-top 0
+    margin-left 10px
+  .username
+    font-weight bold
+    font-size 13px
+    color #999
+    margin-bottom 5px
+  .message.from-me
+    text-align right
+    .message-body
+      margin-left 0
+      margin-right 10px
+    .username
+      display none
+
+.chat-input
+  padding 0
+  margin-top auto
+  position relative
+  overflow hidden
+  flex-shrink 0
+  width 100% !important
+  height 50px
+  input[type="text"]
+    width 100%;
+    height 100%

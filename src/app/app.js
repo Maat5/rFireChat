@@ -29,7 +29,7 @@ class App extends Component {
       );
     }
     return(
-      <AppChat />
+      <AppChat user={this.state.user} />
     );
   }
 }

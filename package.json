@@ -3,13 +3,21 @@
   "version": "1.0.0",
   "description": "basic chat with React.js and firebase",
   "main": "src/index.js",
+  "repository": "https://github.com/Maat5/rFireChat.git",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --progress --profile --inline --watch",
     "build": "rimraf dist && webpack --config webpack.config.js --progress --profile --bail"
   },
-  "author": "Manuel Abrante",
-  "license": "ISC",
+  "author": "Manuel Abrante <abrantemanuel@gmail.com>",
+  "keywords": [
+    "React.js",
+    "React",
+    "Firebase",
+    "Stylus",
+    "webpack"
+  ],
+  "license": "MIT",
   "dependencies": {
     "bootstrap": "3.3.7",
     "firebase": "3.7.3",
